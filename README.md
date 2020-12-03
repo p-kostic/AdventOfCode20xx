@@ -7,7 +7,7 @@
 # Advent Of Code 2020
 My solutions for solving Advent of Code 2020 in C#, running on [.NET 5.0](https://dotnet.microsoft.com/download/dotnet/5.0).
 
-Template from [sindrekjr/AdventOfCodeBase](https://github.com/sindrekjr/AdventOfCodeBase). Below is some of the original template's original README.md to get you started for when you want to run it locally. 
+Template from [sindrekjr/AdventOfCodeBase](https://github.com/sindrekjr/AdventOfCodeBase). Below is some of the template's original documentation to get you started for when you want to run it locally. 
 
 ## Running locally for when you clone/fork this project 
 Create `config.json` with the following key/value pairs. If you run the program without adding a `config.json` file, one will be created for you without a cookie field. The program will not be able to fetch puzzle inputs from the web before a valid cookie is added to the configuration. 
