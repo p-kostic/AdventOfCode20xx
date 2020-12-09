@@ -32,6 +32,15 @@ namespace AdventOfCode.Solutions
 
         }
 
+        /// <summary>
+        /// Source: https://stackoverflow.com/questions/33336540/how-to-use-linq-to-find-all-combinations-of-n-items-from-a-set-of-numbers
+        /// </summary>
+        public static IEnumerable<IEnumerable<T>> DifferentCombinations<T>(this IEnumerable<T> elements, int k)
+        {
+	        return k == 0 ? new[] { Array.Empty<T>() } :
+		        elements.SelectMany((e, i) =>
+			        elements.Skip(i + 1).DifferentCombinations(k - 1).Select(c => new[] { e }.Concat(c)));
+        }
 
         public static int MinOfMany(params int[] items)
         {
