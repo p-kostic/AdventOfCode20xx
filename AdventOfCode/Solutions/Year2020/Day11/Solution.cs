@@ -9,12 +9,12 @@ namespace AdventOfCode.Solutions.Year2020
 
         public Day11() : base(11, 2020, "Seating System")
         {
-            _seatGrid = new NeighborGrid(Input);
+            this._seatGrid = new NeighborGrid(Input);
         }
 
         protected override string SolvePartOne()
         {
-            var firstClone = _seatGrid.Copy();
+            var firstClone = this._seatGrid.Copy();
             var secondClone = firstClone.Copy();
 
             while (true)
@@ -39,7 +39,7 @@ namespace AdventOfCode.Solutions.Year2020
 
         protected override string SolvePartTwo()
         {
-            var firstClone = _seatGrid.Copy();
+            var firstClone = this._seatGrid.Copy();
             var secondClone = firstClone.Copy();
 
             while (true)
@@ -63,6 +63,9 @@ namespace AdventOfCode.Solutions.Year2020
         }
     }
 
+    /// <summary>
+    /// Documented for future reference, (e.g. similar AoC question continuation or 'Minesweeper/Sudoku' like (text-based) games)
+    /// </summary>
     internal class NeighborGrid
     {
         public enum SeatState { Floor, Empty, Occupied };
@@ -91,20 +94,20 @@ namespace AdventOfCode.Solutions.Year2020
         public NeighborGrid(string input)
         {
             var splitInput = input.SplitByNewline();
-            _grid = new SeatState[splitInput.Length, splitInput[0].Length];
+            this._grid = new SeatState[splitInput.Length, splitInput[0].Length];
 
             for (var i = 0; i < splitInput.Length; i++)
                 for (var j = 0; j < splitInput[i].Length; j++)
                 {
                     if (splitInput[i][j] == 'L')
-                        _grid[i, j] = SeatState.Empty;
+                        this._grid[i, j] = SeatState.Empty;
                 }
         }
 
         /// <returns>Since the grid member-variable is private readonly, this functions returns it as a new Object, Essentially making a copy</returns>
         public NeighborGrid Copy()
         {
-            return new NeighborGrid(_grid);
+            return new NeighborGrid(this._grid);
         }
 
         /// <summary>
@@ -113,29 +116,29 @@ namespace AdventOfCode.Solutions.Year2020
         /// <param name="grid">An existing grid</param>
         public NeighborGrid(SeatState[,] grid)
         {
-            _grid = grid.Clone() as SeatState[,];
+            this._grid = grid.Clone() as SeatState[,];
         }
 
         /// <summary>
-        /// Getters and setters for the SeatState positions for a given (x, y) coordinate
+        /// Getters and setters for the SeatState positions for a given (xPos, yPos) coordinate
         /// </summary>
-        /// <param name="x">The x-coordinate</param>
-        /// <param name="y">The y-coordinate</param>
+        /// <param name="x">The xPos-coordinate</param>
+        /// <param name="y">The yPos-coordinate</param>
         public SeatState this[int x, int y]
         {
-            get => _grid[x, y];
-            set => _grid[x, y] = value;
+            get => this._grid[x, y];
+            set => this._grid[x, y] = value;
         }
 
         /// <summary>
-        /// Checks whether the given position (x, y) is out of bounds for the _grid member variable
+        /// Checks whether the given position (xPos, yPos) is out of bounds for the _grid member variable
         /// </summary>
-        /// <param name="x">the x-coordinate</param>
-        /// <param name="y">the y-coordinate</param>
+        /// <param name="x">the xPos-coordinate</param>
+        /// <param name="y">the yPos-coordinate</param>
         /// <returns>True if within bounds, otherwise false</returns>
         private bool IsValidPosition(int x, int y)
         {
-            return x >= 0 && x < _grid.GetLength(0) && y >= 0 && y < _grid.GetLength(1);
+            return x >= 0 && x < this._grid.GetLength(0) && y >= 0 && y < this._grid.GetLength(1);
         }
 
         /// <summary>
@@ -145,21 +148,21 @@ namespace AdventOfCode.Solutions.Year2020
         /// <returns>Amount of seats occupied for the current state of the _grid member variable</returns>
         public long AmountOccupied()
         {
-            return _grid.Cast<SeatState>().Count(c => c == SeatState.Occupied);
+            return this._grid.Cast<SeatState>().Count(c => c == SeatState.Occupied);
         }
 
         /// <summary>
         /// For all valid positions, count the ones that are occupied for the neighbor positions
         /// (e.g. (0,1) + (100, 100) = (100, 101) --> grid[100,101] == SeatState.Occupied = 1, as IEnumerable int, sum those)
         /// </summary>
-        /// <param name="x">The x-coordinate</param>
-        /// <param name="y">The y-coordinate</param>
-        /// <returns>The amount of all occupied spaces around x,y</returns>
-        public int AmountOccupied(int x, int y)
+        /// <param name="xPos">The xPos-coordinate</param>
+        /// <param name="yPos">The yPos-coordinate</param>
+        /// <returns>The amount of all occupied spaces around xPos,yPos</returns>
+        public int AmountOccupied(int xPos, int yPos)
         {
-            return _neighbors.Where(s => IsValidPosition(s.x + x, s.y + y))
-                             .Select(t => _grid[t.x + x, t.y + y] == SeatState.Occupied ? 1 : 0)
-                             .Sum();
+            return this._neighbors.Where(offSet => IsValidPosition(offSet.x + xPos, offSet.y + yPos))
+                                  .Select(offSet => this._grid[offSet.x + xPos, offSet.y + yPos] == SeatState.Occupied ? 1 : 0)
+                                  .Sum();
         }
 
         /// <summary>
@@ -178,32 +181,33 @@ namespace AdventOfCode.Solutions.Year2020
         /// <summary>
         /// For Part 2:
         /// Look for the first seat in each of those eight directions, starting with a multiplier of 1 (first 8-neighbors), 
-        /// By multiplying the search area for a given <param name="x"/>, <param name="y"/> if no seat is found
+        /// By multiplying the search area for a given <param name="xPos"/>, <param name="yPos"/> if no seat is found
         /// </summary>
-        /// <param name="x">x-coordinate of the seatGrid</param>
-        /// <param name="y">y-coordinate of the seatGrid</param>
+        /// <param name="xPos">xPos-coordinate of the seatGrid</param>
+        /// <param name="yPos">yPos-coordinate of the seatGrid</param>
         /// <returns>The amount of first neighbors</returns>
-        public int AmountOccupiedLineOfSight(int x, int y)
+        public int AmountOccupiedLineOfSight(int xPos, int yPos)
         {
             var amountOfNeighbors = 0;
-            foreach (var (lineSightX, lineSightY) in _neighbors)
+            foreach (var (lineSightOffsetX, lineSightOffsetY) in _neighbors)
             {
                 var multiplier = 1;
                 var currentSeat = SeatState.Floor;
                 while (true)
                 {
-                    var multipliedLineSightX = lineSightX * multiplier + x;
-                    var multipliedLineSightY = lineSightY * multiplier + y;
+                    var multipliedLineSightX = lineSightOffsetX * multiplier + xPos;
+                    var multipliedLineSightY = lineSightOffsetY * multiplier + yPos;
 
                     if (!IsValidPosition(multipliedLineSightX, multipliedLineSightY))
                         break;
 
                     currentSeat = this._grid[multipliedLineSightX, multipliedLineSightY];
-                    multiplier++;
 
-                    // Until we reach our first seat seat
+                    // Until we reach our first seat
                     if (currentSeat != SeatState.Floor)
                         break;
+                    
+                    multiplier++;
                 }
                 amountOfNeighbors += currentSeat == SeatState.Occupied ? 1 : 0;
             }
