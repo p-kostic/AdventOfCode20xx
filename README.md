@@ -1,8 +1,10 @@
 [![GitHub issues](https://img.shields.io/github/issues/p-kostic/AdventOfCode2020)](https://github.com/p-kostic/AdventOfCode2020/issues)
 [![GitHub forks](https://img.shields.io/github/forks/p-kostic/AdventOfCode2020)](https://github.com/p-kostic/AdventOfCode2020/network)
 [![GitHub stars](https://img.shields.io/github/stars/p-kostic/AdventOfCode2020)](https://github.com/p-kostic/AdventOfCode2020/stargazers)
+![visitors](https://visitor-badge.glitch.me/badge?page_id=p-kostic.adventofcode2020)
 [![GitHub license](https://img.shields.io/github/license/p-kostic/AdventOfCode2020)](https://github.com/p-kostic/AdventOfCode2020/blob/master/LICENSE.md)
 [![Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fp-kostic%2FAdventOfCode2020)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fp-kostic%2FAdventOfCode2020)
+
 
 # Advent Of Code 2020
 My solutions for solving Advent of Code 2020 in C#, running on [.NET 5.0](https://dotnet.microsoft.com/download/dotnet/5.0).
