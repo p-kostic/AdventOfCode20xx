@@ -6,8 +6,8 @@
 [![Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fp-kostic%2FAdventOfCode2020)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fp-kostic%2FAdventOfCode2020)
 
 
-# Advent Of Code 2020
-My solutions for solving Advent of Code 2020 in C#, running on [.NET 5.0](https://dotnet.microsoft.com/download/dotnet/5.0).
+# Advent Of Code 20xx
+My solutions for solving Advent of Code 20xx in C#, running on [.NET 5.0](https://dotnet.microsoft.com/download/dotnet/5.0).
 
 Template from [sindrekjr/AdventOfCodeBase](https://github.com/sindrekjr/AdventOfCodeBase). Below is some of the template's original documentation to get you started for when you want to run it locally. 
 
@@ -16,8 +16,8 @@ Create `config.json` with the following key/value pairs. If you run the program 
 ```json
 {
   "cookie": "session=c0nt3nt",
-  "year": 2020,
-  "days": [0] 
+  "year": 2021,
+  "days": [1] 
 }
 ```
 
