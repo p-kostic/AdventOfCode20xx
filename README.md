@@ -18,13 +18,13 @@ Template from [sindrekjr/AdventOfCodeBase](https://github.com/sindrekjr/AdventOf
 Create `config.json` with the following key/value pairs. If you run the program without adding a `config.json` file, one will be created for you without a cookie field. The program will not be able to fetch puzzle inputs from the web before a valid cookie is added to the configuration. 
 ```json
 {
-  "cookie": "session=c0nt3nt",
+  "cookie": "c0nt3nt",
   "year": 2022,
   "days": [1] 
 }
 ```
 
-*  `cookie` - Note that `c0nt3nt` must be replaced with a valid cookie value that your browser stores when logging in at adventofcode.com. Instructions on locating your session cookie can be found here: https://github.com/wimglenn/advent-of-code-wim/issues/1
+*  `cookie` - Note that `c0nt3nt` must be replaced with a valid cookie value that your browser stores when logging in at adventofcode.com. Instructions on locating your session cookie can be found here: https://github.com/wimglenn/advent-of-code-wim/issues/1. NOTE: the "session=" prefix must be excluded. 
 *  `year` - Specifies which year you wish to output solutions for when running the project. Defaults to the current year if left unspecified.
 *  `days` - Specifies which days you wish to output solutions for when running the project. Defaults to current day if left unspecified and an event is actively running, otherwise defaults to `0`.
 
