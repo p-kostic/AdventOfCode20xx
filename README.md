@@ -1,5 +1,5 @@
 # AdventOfCode20xx
-Solutions to the Advent Of Code 20xx with C# (.NET 5). The goal is to make it (somewhat) readable
+Solutions to the Advent Of Code 20xx with C# (.NET 7). The goal is to make it (somewhat) readable
 
 [![GitHub issues](https://img.shields.io/github/issues/p-kostic/AdventOfCode2020)](https://github.com/p-kostic/AdventOfCode2020/issues)
 [![GitHub forks](https://img.shields.io/github/forks/p-kostic/AdventOfCode2020)](https://github.com/p-kostic/AdventOfCode2020/network)
@@ -53,4 +53,4 @@ If no value is provided it will generate files for the current year. The script 
 Requires PowerShell v3 or later due to the way `$PSScriptRoot` behaves. If you have Windows 8+ you should be set. Upgrades for previous versions, and installs for macOS and Linux can be found in [Microsoft's Powershell Documentation](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.1)
 
 ## License
-[MIT](https://github.com/p-kostic/AdventOfCode2020/blob/master/LICENSE.md)
+[MIT](https://github.com/p-kostic/AdventOfCode20xx/blob/master/LICENSE.md)
