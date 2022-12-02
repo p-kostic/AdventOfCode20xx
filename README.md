@@ -17,7 +17,7 @@ Solutions to the Advent Of Code 20xx with C# (.NET 7). The goal is to make it (s
 * [Running locally for when you clone/fork this project](https://github.com/p-kostic/AdventOfCode20xx#running-locally-for-when-you-clonefork-this-project)
     * [Running the project](https://github.com/p-kostic/AdventOfCode20xx#running-the-project)
 * [Notes](https://github.com/p-kostic/AdventOfCode20xx#notes)
-    * [Generating previous years solution files](https://github.com/p-kostic/AdventOfCode20xx/edit/master/README.md#generating-previous-years-solution-files)
+    * [Generating previous years solution files](https://github.com/p-kostic/AdventOfCode20xx#generating-previous-years-solution-files)
 * [License](https://github.com/p-kostic/AdventOfCode20xx#license)
 
 ## Solution Completion Table
