@@ -44,12 +44,12 @@ Note that there's a seperate repository for 2021 in **Haskell**: [p-kostic/Adven
 |    17    |  ❌ |  ✔️ |  ❌         |   ❌  |
 |    18    |  ❌ |  ✔️ |  ❌         |   ❌  |
 |    19    |  ❌ |  ✔️ |  ❌         |   ❌  |
-|    20    |  ❌ |  ✔️ |  ❌         |   ❌  |
+|    20    |  ❌ |  ✔️(p1) |  ❌         |   ❌  |
 |    21    |  ❌ |  ✔️ |  ❌         |   ❌  |
 |    22    |  ❌ |  ✔️ |  ❌         |   ❌  |
 |    23    |  ❌ |  ✔️ |  ❌         |   ❌  |
 |    24    |  ❌ |  ✔️ |  ❌         |   ❌  |
-|    25    |  ❌ |  ✔️ |  ❌         |   ❌  |
+|    25    |  ❌ |  ✔️(p1) |  ❌         |   ❌  |
 
 Template from [sindrekjr/AdventOfCodeBase](https://github.com/sindrekjr/AdventOfCodeBase). Below is some of the template's original documentation to get you started for when you want to run it locally. 
 
