@@ -62,7 +62,7 @@ class Solution : SolutionBase
                 case "C": // Scissors = 3
                     if (splitLine[1] == "X") totalSum += 2;       // Need to lose => Paper    = 2 + 0
                     else if (splitLine[1] == "Y") totalSum += 6;  // Need to draw => Scissors = 3 + 3
-                    else totalSum += 7;                           // Need to draw => Rock     = 1 + 6
+                    else totalSum += 7;                           // Need to win  => Rock     = 1 + 6
                     break;
             }
         }
