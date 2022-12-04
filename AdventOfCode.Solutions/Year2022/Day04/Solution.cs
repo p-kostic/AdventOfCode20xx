@@ -9,8 +9,8 @@ internal class Solution : SolutionBase
         _parsedInput = Input.SplitByNewline()
                             .Select(x => x.Split(",")
                                                 .Select(y => y.Split("-")
-                                                                    .Select(int.Parse)
-                                                                    .ToArray()
+                                                              .Select(int.Parse)
+                                                              .ToArray()
                                                        )
                                                 .ToArray()
                                    )
@@ -21,7 +21,7 @@ internal class Solution : SolutionBase
     {
         var count = 0;
         foreach (var pairs in _parsedInput)
-            if ((pairs[0][0] >= pairs[1][0] && pairs[0][1] <= pairs[1][1]) || (pairs[0][0] <= pairs[1][0] && pairs[0][1] >= pairs[1][1])) 
+            if ((pairs[0][0] >= pairs[1][0] && pairs[0][1] <= pairs[1][1]) || (pairs[0][0] <= pairs[1][0] && pairs[0][1] >= pairs[1][1]))
                 count++;
 
         return count.ToString();
@@ -31,9 +31,9 @@ internal class Solution : SolutionBase
     {
         var count = 0;
         foreach (var pairs in _parsedInput)
-            if (pairs[0][0] <= pairs[1][1] && pairs[0][1] >= pairs[1][0]) 
+            if (pairs[0][0] <= pairs[1][1] && pairs[0][1] >= pairs[1][0])
                 count++;
-        
+
         return count.ToString();
     }
 }
