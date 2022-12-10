@@ -23,33 +23,33 @@ Solutions to the Advent Of Code 20xx with C# (.NET 7). The goal is to make it (s
 ## Solution Completion Table
 Note that there's a seperate repository for 2021 in **Haskell**: [p-kostic/AdventOfCode2021](https://github.com/p-kostic/AdventOfCode2021) for Days [1-11, 13p1] before I ragequit when I encountered "stateful" puzzles that require the extensive use of e.g. [Records](https://en.wikibooks.org/wiki/Haskell/More_on_datatypes) and/or [Lenses](https://www.haskellforall.com/2013/05/program-imperatively-using-haskell.html)).
 
-| Day/Year | 2019 | 2020 | 2021        | 2022 |
-|:--------:|:----:|:----:|:-----------:|:----:|
-|     1    |  ❌ |  ✔️ |  ✔️/Haskell |   ✔️  |
-|     2    |  ❌ |  ✔️ |  ✔️/Haskell |   ✔️  |
-|     3    |  ❌ |  ✔️ |  Haskell     |   ✔️  |
-|     4    |  ❌ |  ✔️ |  Haskell     |   ✔️  |
-|     5    |  ❌ |  ✔️ |  Haskell     |   ✔️  |
-|     6    |  ❌ |  ✔️ |  Haskell     |   ✔️  |
-|     7    |  ❌ |  ✔️ |  Haskell     |   ✔️  |
-|     8    |  ❌ |  ✔️ |  Haskell     |   ✔️  |
-|     9    |  ❌ |  ✔️ |  Haskell     |   ✔️  |
-|    10    |  ❌ |  ✔️ |  Haskell     |   ❌  |
-|    11    |  ❌ |  ✔️ |  Haskell     |   ❌  |
-|    12    |  ❌ |  ✔️ |  ❌         |   ❌  |
-|    13    |  ❌ |  ✔️ |  Haskell(p1) |   ❌  |
-|    14    |  ❌ |  ✔️ |  ❌         |   ❌  |
-|    15    |  ❌ |  ✔️ |  ❌         |   ❌  |
-|    16    |  ❌ |  ✔️ |  ❌         |   ❌  |
-|    17    |  ❌ |  ✔️ |  ❌         |   ❌  |
-|    18    |  ❌ |  ✔️ |  ❌         |   ❌  |
-|    19    |  ❌ |  ✔️ |  ❌         |   ❌  |
-|    20    |  ❌ |  ✔️(p1) |  ❌         |   ❌  |
-|    21    |  ❌ |  ✔️ |  ❌         |   ❌  |
-|    22    |  ❌ |  ✔️ |  ❌         |   ❌  |
-|    23    |  ❌ |  ✔️ |  ❌         |   ❌  |
-|    24    |  ❌ |  ✔️ |  ❌         |   ❌  |
-|    25    |  ❌ |  ✔️(p1) |  ❌         |   ❌  |
+| Day/Year | 2019 | 2020   | 2021        |  2022  |
+|:--------:|:----:|:------:|:-----------:|:------:|
+|     1    |  ❌ |  ✔️     |  ✔️/Haskell |   ✔️   |
+|     2    |  ❌ |  ✔️     |  ✔️/Haskell |   ✔️   |
+|     3    |  ❌ |  ✔️     |  Haskell    |   ✔️  |
+|     4    |  ❌ |  ✔️     |  Haskell    |   ✔️  |
+|     5    |  ❌ |  ✔️     |  Haskell    |   ✔️  |
+|     6    |  ❌ |  ✔️     |  Haskell    |   ✔️  |
+|     7    |  ❌ |  ✔️     |  Haskell    |   ✔️  |
+|     8    |  ❌ |  ✔️     |  Haskell    |   ✔️  | 
+|     9    |  ❌ |  ✔️     |  Haskell    |   ✔️   |
+|    10    |  ❌ |  ✔️     |  Haskell    |   ✔️   |
+|    11    |  ❌ |  ✔️     |  Haskell    |   ❌  |
+|    12    |  ❌ |  ✔️     |  ❌         |   ❌  |
+|    13    |  ❌ |  ✔️     |  Haskell(p1)|   ❌  |
+|    14    |  ❌ |  ✔️     |  ❌        |   ❌  |
+|    15    |  ❌ |  ✔️     |  ❌        |   ❌  |
+|    16    |  ❌ |  ✔️     |  ❌        |   ❌  |
+|    17    |  ❌ |  ✔️     |  ❌        |   ❌  |
+|    18    |  ❌ |  ✔️     |  ❌        |   ❌  |
+|    19    |  ❌ |  ✔️     |  ❌        |   ❌  |
+|    20    |  ❌ |  ✔️(p1) |  ❌        |   ❌  |
+|    21    |  ❌ |  ✔️     |  ❌        |   ❌  |
+|    22    |  ❌ |  ✔️     |  ❌        |   ❌  |
+|    23    |  ❌ |  ✔️     |  ❌        |   ❌  |
+|    24    |  ❌ |  ✔️     |  ❌        |   ❌  |
+|    25    |  ❌ |  ✔️(p1) |  ❌        |   ❌  |
 
 Template from [sindrekjr/AdventOfCodeBase](https://github.com/sindrekjr/AdventOfCodeBase). Below is some of the template's original documentation to get you started for when you want to run it locally. 
 
