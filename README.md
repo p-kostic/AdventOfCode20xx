@@ -2,7 +2,7 @@
 
 
 # AdventOfCode20xx
-Solutions to the Advent Of Code 20xx with C# (.NET 7). The goal is to make it (somewhat) readable
+Solutions to the Advent Of Code 20xx with C# (.NET 7). The goal is to make it a personal learning experience, and make it somewhat readable (by e.g. improvements suggested by GitHub Copilot or ChatGPT). These are by no means "optimal" or the most concise/clear solutions.
 
 [![GitHub issues](https://img.shields.io/github/issues/p-kostic/AdventOfCode2020)](https://github.com/p-kostic/AdventOfCode2020/issues)
 [![GitHub forks](https://img.shields.io/github/forks/p-kostic/AdventOfCode2020)](https://github.com/p-kostic/AdventOfCode2020/network)
