@@ -13,6 +13,9 @@ public static class CalculationUtils
     public static int ManhattanDistance((int x, int y) a, (int x, int y) b) =>
         Math.Abs(a.x - b.x) + Math.Abs(a.y - b.y);
 
+    public static long ManhattanDistance((long x, long y) a, (long x, long y) b) =>
+        Math.Abs(a.x - b.x) + Math.Abs(a.y - b.y);
+
     public static void ForEach<T>(this IEnumerable<T> @enum, Action<T> mapFunction)
     {
         foreach (var item in @enum) mapFunction(item);
