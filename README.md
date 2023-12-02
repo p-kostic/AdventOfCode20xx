@@ -2,14 +2,13 @@
 
 
 # AdventOfCode20xx
-Solutions to the Advent Of Code 20xx with C# (.NET 7). The goal is to make it a personal learning experience, and make it somewhat readable (by e.g. improvements suggested by GitHub Copilot or ChatGPT). These are by no means "optimal" or the most concise/clear solutions.
+Solutions to the Advent Of Code 20xx with C# (.NET 8). The goal is to make it a personal learning experience, and make it somewhat readable (by e.g. improvements suggested by GitHub Copilot or ChatGPT). These are by no means "optimal" or the most concise/clear solutions.
 
-[![GitHub issues](https://img.shields.io/github/issues/p-kostic/AdventOfCode2020)](https://github.com/p-kostic/AdventOfCode2020/issues)
-[![GitHub forks](https://img.shields.io/github/forks/p-kostic/AdventOfCode2020)](https://github.com/p-kostic/AdventOfCode2020/network)
-[![GitHub stars](https://img.shields.io/github/stars/p-kostic/AdventOfCode2020)](https://github.com/p-kostic/AdventOfCode2020/stargazers)
-![visitors](https://visitor-badge.glitch.me/badge?page_id=p-kostic.adventofcode2020)
-[![GitHub license](https://img.shields.io/github/license/p-kostic/AdventOfCode2020)](https://github.com/p-kostic/AdventOfCode2020/blob/master/LICENSE.md)
-[![Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fp-kostic%2FAdventOfCode2020)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fp-kostic%2FAdventOfCode2020)
+[![GitHub issues](https://img.shields.io/github/issues/p-kostic/AdventOfCode20xx)](https://github.com/p-kostic/AdventOfCode20xx/issues)
+[![GitHub forks](https://img.shields.io/github/forks/p-kostic/AdventOfCode20xx)](https://github.com/p-kostic/AdventOfCode20xx/network)
+[![GitHub stars](https://img.shields.io/github/stars/p-kostic/AdventOfCode20xx)](https://github.com/p-kostic/AdventOfCode20xx/stargazers)
+[![GitHub license](https://img.shields.io/github/license/p-kostic/AdventOfCode20xx)](https://github.com/p-kostic/AdventOfCode20xx/blob/master/LICENSE.md)
+[![Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fp-kostic%2FAdventOfCode20xx)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fp-kostic%2FAdventOfCode20xx)
 
 ## Table of Contents
 * [Solution Completion Table](https://github.com/p-kostic/AdventOfCode20xx#solution-completion-table)
@@ -23,45 +22,42 @@ Solutions to the Advent Of Code 20xx with C# (.NET 7). The goal is to make it a 
 ## Solution Completion Table
 Note that there's a seperate repository for 2021 in **Haskell**: [p-kostic/AdventOfCode2021](https://github.com/p-kostic/AdventOfCode2021) for Days [1-11, 13p1] before I ragequit when I encountered "stateful" puzzles that require the extensive use of e.g. [Records](https://en.wikibooks.org/wiki/Haskell/More_on_datatypes) and/or [Lenses](https://www.haskellforall.com/2013/05/program-imperatively-using-haskell.html)).
 
-| Day/Year | 2019 | 2020   | 2021        |  2022  |
-|:--------:|:----:|:------:|:-----------:|:------:|
-|     1    |  ❌ |  ✔️     |  ✔️/Haskell |   ✔️   |
-|     2    |  ❌ |  ✔️     |  ✔️/Haskell |   ✔️   |
-|     3    |  ❌ |  ✔️     |  Haskell    |   ✔️  |
-|     4    |  ❌ |  ✔️     |  Haskell    |   ✔️  |
-|     5    |  ❌ |  ✔️     |  Haskell    |   ✔️  |
-|     6    |  ❌ |  ✔️     |  Haskell    |   ✔️  |
-|     7    |  ❌ |  ✔️     |  Haskell    |   ✔️  |
-|     8    |  ❌ |  ✔️     |  Haskell    |   ✔️  | 
-|     9    |  ❌ |  ✔️     |  Haskell    |   ✔️   |
-|    10    |  ❌ |  ✔️     |  Haskell    |   ✔️   |
-|    11    |  ❌ |  ✔️     |  Haskell    |   ✔️  |
-|    12    |  ❌ |  ✔️     |  ❌         |   ✔️  |
-|    13    |  ❌ |  ✔️     |  Haskell(p1)|   ✔️  |
-|    14    |  ❌ |  ✔️     |  ❌        |   ✔️  |
-|    15    |  ❌ |  ✔️     |  ❌        |   ✔️  |
-|    16    |  ❌ |  ✔️     |  ❌        |   ❌  |
-|    17    |  ❌ |  ✔️     |  ❌        |   ❌  |
-|    18    |  ❌ |  ✔️     |  ❌        |   ❌  |
-|    19    |  ❌ |  ✔️     |  ❌        |   ❌  |
-|    20    |  ❌ |  ✔️(p1) |  ❌        |   ❌  |
-|    21    |  ❌ |  ✔️     |  ❌        |   ❌  |
-|    22    |  ❌ |  ✔️     |  ❌        |   ❌  |
-|    23    |  ❌ |  ✔️     |  ❌        |   ❌  |
-|    24    |  ❌ |  ✔️     |  ❌        |   ❌  |
-|    25    |  ❌ |  ✔️(p1) |  ❌        |   ❌  |
+| Day/Year | 2019 | 2020   | 2021        |  2022  |  2023 |
+|:--------:|:----:|:------:|:-----------:|:------:| :----:|
+|     1    |  ❌ |  ✔️     |  ✔️/Haskell |   ✔️   |   ✔️   |
+|     2    |  ❌ |  ✔️     |  ✔️/Haskell |   ✔️   |   ❌  |
+|     3    |  ❌ |  ✔️     |  Haskell    |   ✔️  |   ❌  |
+|     4    |  ❌ |  ✔️     |  Haskell    |   ✔️  |   ❌  |
+|     5    |  ❌ |  ✔️     |  Haskell    |   ✔️  |   ❌  |
+|     6    |  ❌ |  ✔️     |  Haskell    |   ✔️  |   ❌  |
+|     7    |  ❌ |  ✔️     |  Haskell    |   ✔️  |   ❌  |
+|     8    |  ❌ |  ✔️     |  Haskell    |   ✔️  |    ❌  |
+|     9    |  ❌ |  ✔️     |  Haskell    |   ✔️   |   ❌  |
+|    10    |  ❌ |  ✔️     |  Haskell    |   ✔️   |   ❌  |
+|    11    |  ❌ |  ✔️     |  Haskell    |   ✔️  |   ❌  |
+|    12    |  ❌ |  ✔️     |  ❌         |   ✔️  |   ❌  |
+|    13    |  ❌ |  ✔️     |  Haskell(p1)|   ✔️  |   ❌  |
+|    14    |  ❌ |  ✔️     |  ❌        |   ✔️  |   ❌  |
+|    15    |  ❌ |  ✔️     |  ❌        |   ✔️  |   ❌  |
+|    16    |  ❌ |  ✔️     |  ❌        |   ❌  |   ❌  |
+|    17    |  ❌ |  ✔️     |  ❌        |   ❌  |   ❌  |
+|    18    |  ❌ |  ✔️     |  ❌        |   ❌  |   ❌  |
+|    19    |  ❌ |  ✔️     |  ❌        |   ❌  |   ❌  |
+|    20    |  ❌ |  ✔️(p1) |  ❌        |   ❌  |   ❌  |
+|    21    |  ❌ |  ✔️     |  ❌        |   ❌  |   ❌  |
+|    22    |  ❌ |  ✔️     |  ❌        |   ❌  |   ❌  |
+|    23    |  ❌ |  ✔️     |  ❌        |   ❌  |   ❌  |
+|    24    |  ❌ |  ✔️     |  ❌        |   ❌  |   ❌  |
+|    25    |  ❌ |  ✔️(p1) |  ❌        |   ❌  |   ❌  |
 
 Template from [sindrekjr/AdventOfCodeBase](https://github.com/sindrekjr/AdventOfCodeBase). Below is some of the template's original documentation to get you started for when you want to run it locally. 
-
-## Temporary note for running older years when cloning
-Note: A [recent commit](https://github.com/p-kostic/AdventOfCode20xx/commit/ac0d6781f956d767602d385a22cb33c158e1769a) that pulls all recent changes made to the base template since 2021 - 2022 requires a mundane refactor task for the namespaces of of the solution files for years 2019-2021
 
 ## Running locally for when you clone/fork this project 
 Create `config.json` with the following key/value pairs. If you run the program without adding a `config.json` file, one will be created for you without a cookie field. The program will not be able to fetch puzzle inputs from the web before a valid cookie is added to the configuration. 
 ```json
 {
   "cookie": "c0nt3nt",
-  "year": 2022,
+  "year": 2023,
   "days": [1] 
 }
 ```
