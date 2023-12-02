@@ -73,8 +73,7 @@ internal class Solution : SolutionBase
                     break;
                 }
             }
-            result.Add(digitsPerLine.First() * 10);
-            result.Add(digitsPerLine.Last());
+            result.Add(digitsPerLine.First() * 10 + digitsPerLine.Last());
         }
         return result.Sum().ToString();
     }
