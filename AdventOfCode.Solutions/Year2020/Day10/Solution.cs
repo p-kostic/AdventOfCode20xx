@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace AdventOfCode.Solutions.Year2020
+namespace AdventOfCode.Solutions.Year2020.Day10
 {
 
-    class Day10 : SolutionBase
+    class Solution : SolutionBase
     {
         private readonly List<int> _input;
         private readonly int _maxJolt;
 
-        public Day10() : base(10, 2020, "Adapter Array")
+        public Solution() : base(10, 2020, "Adapter Array")
         {
             string[] splitInput = Input.SplitByNewline();
             _input = Array.ConvertAll(splitInput, s => int.Parse(s)).ToList();

@@ -1,13 +1,13 @@
 using System;
 using System.Linq;
 
-namespace AdventOfCode.Solutions.Year2020
+namespace AdventOfCode.Solutions.Year2020.Day06
 {
-	class Day06 : SolutionBase
+	class Solution : SolutionBase
     {
 	    private readonly string[][] _parsedInput;
 
-        public Day06() : base(06, 2020, "Custom Customs")
+        public Solution() : base(06, 2020, "Custom Customs")
         {
 	        _parsedInput = Input.Split(new[] { "\n\n" }, StringSplitOptions.RemoveEmptyEntries)
 									  .Select(x => x.Split('\n'))

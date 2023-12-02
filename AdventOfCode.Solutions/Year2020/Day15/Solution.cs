@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AdventOfCode.Solutions.Year2020
+namespace AdventOfCode.Solutions.Year2020.Day15
 {
-    internal class Day15 : SolutionBase
+    internal class Solution : SolutionBase
     {
         private readonly int[] _parsedInput;
 
-        public Day15() : base(15, 2020, "Rambunctious Recitation")
+        public Solution() : base(15, 2020, "Rambunctious Recitation")
         {
             _parsedInput = Input.Split(',')
                                 .Select(int.Parse)

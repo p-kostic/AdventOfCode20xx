@@ -2,16 +2,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace AdventOfCode.Solutions.Year2020
+namespace AdventOfCode.Solutions.Year2020.Day21
 {
-    internal class Day21 : SolutionBase
+    internal class Solution : SolutionBase
     {
         private HashSet<string> _ingredients;
         private HashSet<string> _allergens;
         private readonly HashSet<(HashSet<string> ingredients, HashSet<string> allergens)> _foods;
         private List<string> _unknowns;
 
-        public Day21() : base(21, 2020, "Allergen Assessment")
+        public Solution() : base(21, 2020, "Allergen Assessment")
         {
             this._ingredients = new HashSet<string>();
             this._allergens = new HashSet<string>();

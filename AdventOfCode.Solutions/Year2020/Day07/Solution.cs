@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace AdventOfCode.Solutions.Year2020
+namespace AdventOfCode.Solutions.Year2020.Day07
 {
-	class Day07 : SolutionBase
+	class Solution : SolutionBase
 	{
 		private struct Bag
 		{
@@ -18,7 +18,7 @@ namespace AdventOfCode.Solutions.Year2020
 		/// Parse input to Dictionary<string, List of bags with count and color>
 		/// where every bag itself has an entry in the dictionary etc. :)
 		/// </summary>
-		public Day07() : base(07, 2020, "Handy Haversacks")
+		public Solution() : base(07, 2020, "Handy Haversacks")
 		{
 			_parsedInput = new Dictionary<string, List<Bag>>();
 

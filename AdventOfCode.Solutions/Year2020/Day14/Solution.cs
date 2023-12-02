@@ -2,12 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AdventOfCode.Solutions.Year2020
+namespace AdventOfCode.Solutions.Year2020.Day14
 {
-    internal class Day14 : SolutionBase
+    internal class Solution : SolutionBase
     {
         private readonly string[] _splitInput;
-        public Day14() : base(14, 2020, "Docking Data")
+        public Solution() : base(14, 2020, "Docking Data")
         {
             _splitInput = Input.SplitByNewline();
         }

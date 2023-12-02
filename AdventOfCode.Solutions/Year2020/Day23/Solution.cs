@@ -1,14 +1,14 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AdventOfCode.Solutions.Year2020
+namespace AdventOfCode.Solutions.Year2020.Day23
 {
-    internal class Day23 : SolutionBase
+    internal class Solution : SolutionBase
     {
         private readonly LinkedList<int> _cupsP1;
         private readonly LinkedList<int> _cupsP2;
 
-        public Day23() : base(23, 2020, "Crab Cups")
+        public Solution() : base(23, 2020, "Crab Cups")
         {
             // Part 1
             this._cupsP1 = new LinkedList<int>();

@@ -1,11 +1,11 @@
-namespace AdventOfCode.Solutions.Year2020
+namespace AdventOfCode.Solutions.Year2020.Day25
 {
-    class Day25 : SolutionBase
+    class Solution : SolutionBase
     {
         private readonly long _subject;
         private readonly long _publicKey;
 
-        public Day25() : base(25, 2020, "Combo Breaker")
+        public Solution() : base(25, 2020, "Combo Breaker")
         {
             var splitLines = Input.SplitByNewline();
             this._subject = long.Parse(splitLines[0]);

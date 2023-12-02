@@ -1,17 +1,17 @@
-namespace AdventOfCode.Solutions.Year2020
+namespace AdventOfCode.Solutions.Year2020.Day01
 {
-    class Day01 : SolutionBase
+    class Solution : SolutionBase
     {
         private readonly int[] parsedInput;
 
-        public Day01() : base(01, 2020, "Report Repair")
+        public Solution() : base(01, 2020, "Report Repair")
         {
-            string[] lines = Input.SplitByNewline();
+            string[] lines = this.Input.SplitByNewline();
 
-            parsedInput = new int[lines.Length];
+            this.parsedInput = new int[lines.Length];
 
             for (int i = 0; i < lines.Length; i++)
-                parsedInput[i] = int.Parse(lines[i]);
+                this.parsedInput[i] = int.Parse(lines[i]);
         }
 
         /// <summary>
@@ -21,11 +21,11 @@ namespace AdventOfCode.Solutions.Year2020
         {
             int part1Result = 0;
 
-            for (int i = 0; i < parsedInput.Length - 1; i++)
-                for (int j = i + 1; j < parsedInput.Length; j++)
+            for (int i = 0; i < this.parsedInput.Length - 1; i++)
+                for (int j = i + 1; j < this.parsedInput.Length; j++)
                 {
-                    if (parsedInput[i] + parsedInput[j] == 2020)
-                        part1Result = parsedInput[i] * parsedInput[j];
+                    if (this.parsedInput[i] + this.parsedInput[j] == 2020)
+                        part1Result = this.parsedInput[i] * this.parsedInput[j];
                 }
             return part1Result.ToString();
         }
@@ -37,12 +37,12 @@ namespace AdventOfCode.Solutions.Year2020
         {
             int part2Result = 0;
 
-            for (int i = 0; i < parsedInput.Length - 2; i++)
-                for (int j = i + 1; j < parsedInput.Length - 1; j++)
-                    for (int z = j + 1; z < parsedInput.Length; z++)
+            for (int i = 0; i < this.parsedInput.Length - 2; i++)
+                for (int j = i + 1; j < this.parsedInput.Length - 1; j++)
+                    for (int z = j + 1; z < this.parsedInput.Length; z++)
                     {
-                        if (parsedInput[i] + parsedInput[j] + parsedInput[z] == 2020)
-                            part2Result = parsedInput[i] * parsedInput[j] * parsedInput[z];
+                        if (this.parsedInput[i] + this.parsedInput[j] + this.parsedInput[z] == 2020)
+                            part2Result = this.parsedInput[i] * this.parsedInput[j] * this.parsedInput[z];
                     }
                    
             return part2Result.ToString();

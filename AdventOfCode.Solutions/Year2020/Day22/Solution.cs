@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AdventOfCode.Solutions.Year2020
+namespace AdventOfCode.Solutions.Year2020.Day22
 {
-    internal class Day22 : SolutionBase
+    internal class Solution : SolutionBase
     {
         private readonly List<int> _deck1;
         private readonly List<int> _deck2;
@@ -11,12 +11,12 @@ namespace AdventOfCode.Solutions.Year2020
         private readonly Queue<int> _deck1Queue;
         private readonly Queue<int> _deck2Queue;
 
-        public Day22() : base(22, 2020, "Crab Combat")
+        public Solution() : base(22, 2020, "Crab Combat")
         {
             // Part 1
-            var decks = this.Input.Split("\n\n");
-            this._deck1 = decks[0].Split('\n').Skip(1).Select(int.Parse).ToList();
-            this._deck2 = decks[1].Split('\n').Skip(1).Select(int.Parse).ToList();
+            var decks = this.Input.SplitByParagraph(true);
+            this._deck1 = decks[0].SplitByNewline(true).Skip(1).Select(int.Parse).ToList();
+            this._deck2 = decks[1].SplitByNewline(true).Skip(1).Select(int.Parse).ToList();
 
             // Part 2
             this._deck1Queue = new Queue<int>();

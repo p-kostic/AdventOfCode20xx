@@ -1,8 +1,8 @@
 using System;
 
-namespace AdventOfCode.Solutions.Year2020
+namespace AdventOfCode.Solutions.Year2020.Day12
 {
-    internal class Day12 : SolutionBase
+    internal class Solution : SolutionBase
     {
         private readonly string[] _inputLines;
 
@@ -14,7 +14,7 @@ namespace AdventOfCode.Solutions.Year2020
             West = 270
         };
 
-        public Day12() : base(12, 2020, "Rain Risk")
+        public Solution() : base(12, 2020, "Rain Risk")
         {
             _inputLines = Input.SplitByNewline();
         }

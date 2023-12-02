@@ -2,42 +2,42 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AdventOfCode.Solutions.Year2020
+namespace AdventOfCode.Solutions.Year2020.Day16
 {
-    internal class Day16 : SolutionBase
+    internal class Solution : SolutionBase
     {
         private readonly Dictionary<string, (int Min, int Max)[]> _criteria;
         private readonly List<long> _ticket;
         private readonly List<List<int>> _otherTickets;
 
-        public Day16() : base(16, 2020, "Ticket Translation")
+        public Solution() : base(16, 2020, "Ticket Translation")
         {
-            var splitBlockInput = Input.Split("\n\n").ToList();
+            var splitBlockInput = this.Input.Split("\n\n").ToList();
 
             // Parse the criteria
-            _criteria = new Dictionary<string, (int Min, int Max)[]>();
+            this._criteria = new Dictionary<string, (int Min, int Max)[]>();
             foreach (var line in splitBlockInput[0].Split("\n"))
             {
-                var splitLine = line.Split(" ");
-                var key = string.Join(" ", splitLine[..^3]);
+                string[] splitLine = line.Split(" ");
+                string key = string.Join(" ", splitLine[..^3]);
 
-                var splitCriteriaOne = splitLine[^3].Split('-');
+                string[] splitCriteriaOne = splitLine[^3].Split('-');
                 var criteriaOne = (int.Parse(splitCriteriaOne[0]), int.Parse(splitCriteriaOne[1]));
 
-                var splitCriteriaTwo = splitLine[^1].Split('-');
+                string[] splitCriteriaTwo = splitLine[^1].Split('-');
                 var criteriaTwo = (int.Parse(splitCriteriaTwo[0]), int.Parse(splitCriteriaTwo[1]));
 
-                _criteria.Add(key, new[] { criteriaOne, criteriaTwo });
+                this._criteria.Add(key, new[] { criteriaOne, criteriaTwo });
             }
 
             // Parse 'your ticket'
-            _ticket = splitBlockInput[1].Split("\n")[1]
+            this._ticket = splitBlockInput[1].Split("\n")[1]
                                         .Split(",")
                                         .Select(long.Parse)
                                         .ToList();
 
             // Parse 'nearby tickets'
-            _otherTickets = splitBlockInput[2].Split("\n")[1..]
+            this._otherTickets = splitBlockInput[2].SplitByNewline(true)[1..]
                                               .Select(x => x.Split(","))
                                               .Select(x => x.Select(int.Parse).ToList())
                                               .ToList();
@@ -57,15 +57,15 @@ namespace AdventOfCode.Solutions.Year2020
         //           Sort by the number of rule sets each index can meet (i.e. not yet in usedCriteriaSet) and eliminate one-by-one.
         protected override string SolvePartTwo()
         {
-            var validTicketsTransposed = Transpose(_otherTickets.Where(x => Check(_criteria.SelectMany(kvp => kvp.Value).ToList(), x)));
-            var matchingFields = validTicketsTransposed.Select((fields, index) => (_criteria.Keys.Where(x => Check(x, fields)), index)).ToList();
+            var validTicketsTransposed = Transpose(this._otherTickets.Where(x => Check(this._criteria.SelectMany(kvp => kvp.Value).ToList(), x)));
+            var matchingFields = validTicketsTransposed.Select((fields, index) => (this._criteria.Keys.Where(x => Check(x, fields)), index)).ToList();
 
             var result = new List<int>();
             var usedCriteria = new HashSet<string>();
 
-            foreach (var (fields, index) in validTicketsTransposed.Select(_ => matchingFields.First()))
+            foreach ((var fields, int index) in validTicketsTransposed.Select(_ => matchingFields.First()))
             {
-                var enumeratedFields = fields as string[] ?? fields.ToArray();
+                string[] enumeratedFields = fields as string[] ?? fields.ToArray();
                 if (enumeratedFields.First().StartsWith("depart"))
                     result.Add(index);
 
@@ -75,7 +75,7 @@ namespace AdventOfCode.Solutions.Year2020
                                                .ToList();
             }
 
-            return result.Select(x => _ticket[x])
+            return result.Select(x => this._ticket[x])
                          .Aggregate((x, y) => x * y)
                          .ToString();
         }
@@ -85,7 +85,7 @@ namespace AdventOfCode.Solutions.Year2020
         /// </summary>
         private bool Check(string key, IEnumerable<int> tickets)
         {
-            return tickets.All(x => _criteria[key].Any(y => x >= y.Min && x <= y.Max));
+            return tickets.All(x => this._criteria[key].Any(y => x >= y.Min && x <= y.Max));
         }
 
         /// <summary>

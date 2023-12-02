@@ -1,11 +1,9 @@
-using System.Collections.Generic;
-using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace AdventOfCode.Solutions.Year2020
+namespace AdventOfCode.Solutions.Year2020.Day04
 {
 
-    class Day04 : SolutionBase
+    class Solution : SolutionBase
     {
         private readonly List<string> parsedInput;
 
@@ -16,23 +14,26 @@ namespace AdventOfCode.Solutions.Year2020
         /// <summary>
         /// O(N * L) where L is the maximum number of key-value pairs
         /// </summary>
-        public Day04() : base(04, 2020, "Passport Processing")
+        public Solution() : base(04, 2020, "Passport Processing")
         {
-            parsedInput = Input.Split("\n\n")
+            this.parsedInput = this.Input.Split("\n\n")
                                .Select(s => s.Replace('\n', ' '))
                                .ToList();
 
-            passportList = new List<Dictionary<string, string>>();
-            validPassPortList = new List<Dictionary<string, string>>();
+            this.passportList = new List<Dictionary<string, string>>();
+            this.validPassPortList = new List<Dictionary<string, string>>();
 
 
-            foreach (var line in parsedInput)
+            foreach (string line in this.parsedInput)
             {
                 var passportDic = new Dictionary<string, string>();
-                var keyValuePairs = line.Split(' ');
+                string[] keyValuePairs = line.Split(' ');
 
                 foreach (var kvp in keyValuePairs)
                 {
+                    if (kvp == string.Empty)
+                        continue;
+
                     var splitKvp = kvp.Split(':');
                     passportDic.Add(splitKvp[0], splitKvp[1]);
                 }

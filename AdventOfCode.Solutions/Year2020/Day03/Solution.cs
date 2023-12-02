@@ -1,11 +1,11 @@
-namespace AdventOfCode.Solutions.Year2020
+namespace AdventOfCode.Solutions.Year2020.Day03
 {
 
-    class Day03 : SolutionBase
+    class Solution : SolutionBase
     {
         private readonly string[] inputArray;
 
-        public Day03() : base(03, 2020, "Toboggan Trajectory")
+        public Solution() : base(03, 2020, "Toboggan Trajectory")
         {
             inputArray = Input.SplitByNewline();
         }

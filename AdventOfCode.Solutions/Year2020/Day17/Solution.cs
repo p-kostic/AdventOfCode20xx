@@ -1,14 +1,14 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AdventOfCode.Solutions.Year2020
+namespace AdventOfCode.Solutions.Year2020.Day17
 {
-    internal class Day17 : SolutionBase
+    internal class Solution : SolutionBase
     {
         private Dictionary<(int x, int y, int z), bool> _cube3D;
         private Dictionary<(int x, int y, int z, int w), bool> _cube4D;
 
-        public Day17() : base(17, 2020, "Conway Cubes")
+        public Solution() : base(17, 2020, "Conway Cubes")
         {
             this._cube3D = new Dictionary<(int x, int y, int z), bool>();
             this._cube4D = new Dictionary<(int x, int y, int z, int w), bool>();

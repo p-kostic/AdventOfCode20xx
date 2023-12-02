@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AdventOfCode.Solutions.Year2020
+namespace AdventOfCode.Solutions.Year2020.Day11
 {
-    internal class Day11 : SolutionBase
+    internal class Solution : SolutionBase
     {
         private readonly NeighborGrid _seatGrid;
 
-        public Day11() : base(11, 2020, "Seating System")
+        public Solution() : base(11, 2020, "Seating System")
         {
             this._seatGrid = new NeighborGrid(Input);
         }

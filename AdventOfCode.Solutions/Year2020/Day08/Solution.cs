@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 
-namespace AdventOfCode.Solutions.Year2020
+namespace AdventOfCode.Solutions.Year2020.Day08
 {
-	internal class Day08 : SolutionBase
+	internal class Solution : SolutionBase
 	{
 		private readonly List<string> _input;
 
-		public Day08() : base(08, 2020, "Handheld Halting")
+		public Solution() : base(08, 2020, "Handheld Halting")
 		{
 			this._input = new List<string>(Input.SplitByNewline());
 		}

@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AdventOfCode.Solutions.Year2020
+namespace AdventOfCode.Solutions.Year2020.Day20
 {
-    internal class Day20 : SolutionBase
+    internal class Solution : SolutionBase
     {
         private readonly Dictionary<int, SubGrid> _inputGrids;
 
@@ -15,9 +15,9 @@ namespace AdventOfCode.Solutions.Year2020
             Right = 3
         };
 
-        public Day20() : base(20, 2020, "Jurassic Jigsaw")
+        public Solution() : base(20, 2020, "Jurassic Jigsaw")
         {
-            this._inputGrids = this.Input.Split("\n\n").Select(x => new SubGrid(x)).ToDictionary(x => x.Id, x => x);
+            this._inputGrids = this.Input.SplitByParagraph(true).Select(x => new SubGrid(x)).ToDictionary(x => x.Id, x => x);
         }
 
         protected override string SolvePartOne()
@@ -34,7 +34,7 @@ namespace AdventOfCode.Solutions.Year2020
 
         protected override string SolvePartTwo()
         {
-            return null;
+            return "";
         }
 
         internal class SubGrid
@@ -44,7 +44,7 @@ namespace AdventOfCode.Solutions.Year2020
             public List<string> Sides;
 
             public SubGrid(string inputTile)
-            {
+            { 
                 this.Id = int.Parse(inputTile.Substring(5, 4));
 
                 var gridToParse = inputTile.Substring(11).SplitByNewline();

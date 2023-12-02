@@ -2,14 +2,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace AdventOfCode.Solutions.Year2020
+namespace AdventOfCode.Solutions.Year2020.Day19
 {
-    internal class Day19 : SolutionBase
+    internal class Solution : SolutionBase
     {
         private readonly string[] _messages;
         private readonly Dictionary<string, string> _rules;
 
-        public Day19() : base(19, 2020, "Monster Messages")
+        public Solution() : base(19, 2020, "Monster Messages")
         {
             var splitInput = this.Input.Split("\n\n");
 

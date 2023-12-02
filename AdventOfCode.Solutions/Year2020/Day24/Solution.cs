@@ -2,14 +2,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace AdventOfCode.Solutions.Year2020
+namespace AdventOfCode.Solutions.Year2020.Day24
 {
-    internal class Day24 : SolutionBase
+    internal class Solution : SolutionBase
     {
         private readonly List<List<string>> _rules;
         private readonly List<string> _direction;
 
-        public Day24() : base(24, 2020, "Lobby Layout")
+        public Solution() : base(24, 2020, "Lobby Layout")
         {
             this._rules = new List<List<string>>();
 

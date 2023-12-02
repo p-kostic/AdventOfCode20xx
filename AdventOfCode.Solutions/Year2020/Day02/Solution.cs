@@ -1,12 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace AdventOfCode.Solutions.Year2020
+namespace AdventOfCode.Solutions.Year2020.Day02
 {
-
-    class Day02 : SolutionBase
+    class Solution : SolutionBase
     {
         struct ParsedLine
         {
@@ -18,7 +12,7 @@ namespace AdventOfCode.Solutions.Year2020
 
         List<ParsedLine> parsedInput;
 
-        public Day02() : base(02, 2020, "Password Philosophy")
+        public Solution() : base(02, 2020, "Password Philosophy")
         {
             string[] lines = Input.SplitByNewline();
             parsedInput = new List<ParsedLine>();

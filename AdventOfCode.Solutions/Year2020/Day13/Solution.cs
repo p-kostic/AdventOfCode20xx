@@ -1,13 +1,13 @@
 using System.Linq;
 
-namespace AdventOfCode.Solutions.Year2020
+namespace AdventOfCode.Solutions.Year2020.Day13
 {
-    internal class Day13 : SolutionBase
+    internal class Solution : SolutionBase
     {
         private readonly int _earliestDepart;
         private readonly int[] _busDepartures;
 
-        public Day13() : base(13, 2020, "Shuttle Search")
+        public Solution() : base(13, 2020, "Shuttle Search")
         {
             var parsedInput = Input.SplitByNewline();
             _earliestDepart = int.Parse(parsedInput[0]);

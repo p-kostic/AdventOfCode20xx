@@ -1,33 +1,29 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace AdventOfCode.Solutions.Year2020
+namespace AdventOfCode.Solutions.Year2020.Day09
 {
-    class Day09 : SolutionBase
+    internal class Solution : SolutionBase
     {
 	    private readonly List<long> _input;
 	    private long _noPropertyNumber = long.MinValue;
 
-        public Day09() : base(09, 2020, "Encoding Error")
+        public Solution() : base(09, 2020, "Encoding Error")
         {
-	        _input = Input.Split('\n')
+            this._input = this.Input.SplitByNewline(true)
 		        .Select(x => Convert.ToInt64(x))
 		        .ToList();
         }
 
 		protected override string SolvePartOne()
         {
-	        for (var i = 25; i < _input.Count; i++)
+	        for (int i = 25; i < this._input.Count; i++)
 	        {
-		        var previous25 = _input.GetRange(i - 25, 25);
-		        var found = previous25.DifferentCombinations(2).Any(combination => combination.Sum() == _input[i]);
+		        var previous25 = this._input.GetRange(i - 25, 25);
+		        bool found = previous25.DifferentCombinations(2).Any(combination => combination.Sum() == this._input[i]);
 
 		        if (found) 
 					continue;
 
-		        _noPropertyNumber = _input[i];
-		        return _noPropertyNumber.ToString();
+		        this._noPropertyNumber = this._input[i];
+		        return this._noPropertyNumber.ToString();
 	        }
 	        return null;
         }
@@ -40,16 +36,16 @@ namespace AdventOfCode.Solutions.Year2020
 		/// </summary>
 		protected override string SolvePartTwo()
         {
-	        var low = 0;
-	        var high = 1;
+	        int low = 0;
+	        int high = 1;
 
 	        for(;;)
 	        {
-		        var range = _input.GetRange(low, (high - low) + 1);
+		        var range = this._input.GetRange(low, (high - low) + 1);
 
-		        if (range.Sum() == _noPropertyNumber)
+		        if (range.Sum() == this._noPropertyNumber)
 			        return (range.Min() + range.Max()).ToString();
-		        if (range.Sum() < _noPropertyNumber)
+		        if (range.Sum() < this._noPropertyNumber)
 			        high++;
 		        else
 		        {

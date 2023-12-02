@@ -1,13 +1,13 @@
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace AdventOfCode.Solutions.Year2020
+namespace AdventOfCode.Solutions.Year2020.Day18
 {
-    internal class Day18 : SolutionBase
+    internal class Solution : SolutionBase
     {
         private readonly string[] _splitInput;
 
-        public Day18() : base(18, 2020, "Operation Order")
+        public Solution() : base(18, 2020, "Operation Order")
         {
             this._splitInput = this.Input.SplitByNewline();
         }

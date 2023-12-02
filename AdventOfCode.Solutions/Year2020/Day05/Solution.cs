@@ -1,12 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace AdventOfCode.Solutions.Year2020
+namespace AdventOfCode.Solutions.Year2020.Day05
 {
-    class Day05 : SolutionBase
+    class Solution : SolutionBase
     {
-        HashSet<int> parsedInput;
+        readonly HashSet<int> _parsedInput;
 
         /// <summary>
         /// The question's example for getting the seatID is a convoluted example of binary numbers
@@ -18,15 +14,15 @@ namespace AdventOfCode.Solutions.Year2020
         /// =  512  +  0    +   0   +   0   +   32   +  16  +   0   +   4   +   2   +   1 
         /// = 567
         /// </summary>
-        public Day05() : base(05, 2020, "Binary Boarding")
+        public Solution() : base(05, 2020, "Binary Boarding")
         {
-            parsedInput = Input.Replace("F", "0")
-                               .Replace("B", "1")
-                               .Replace("L", "0")
-                               .Replace("R", "1")
-                               .Split("\n")
-                               .Select(row => Convert.ToInt32(row, 2)) // base 2
-                               .ToHashSet();
+            this._parsedInput = this.Input.Replace("F", "0")
+                .Replace("B", "1")
+                .Replace("L", "0")
+                .Replace("R", "1")
+                .SplitByNewline(true)
+                .Select(row => Convert.ToInt32(row, 2))
+                .ToHashSet();
         }
 
         /// <summary>
@@ -34,7 +30,7 @@ namespace AdventOfCode.Solutions.Year2020
         /// </summary>
         protected override string SolvePartOne()
         {
-            return parsedInput.Max().ToString();
+            return this._parsedInput.Max().ToString();
         }
 
         /// <summary>
@@ -44,9 +40,9 @@ namespace AdventOfCode.Solutions.Year2020
         /// </summary>
         protected override string SolvePartTwo()
         {
-            var min = parsedInput.Min();
-            var max = parsedInput.Max();
-            return Enumerable.Range(min, max - min + 1).Single(id => !parsedInput.Contains(id)).ToString();
+            int min = this._parsedInput.Min();
+            int max = this._parsedInput.Max();
+            return Enumerable.Range(min, max - min + 1).Single(id => !this._parsedInput.Contains(id)).ToString();
         }
     }
 }
