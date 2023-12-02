@@ -1,4 +1,4 @@
-﻿namespace AdventOfCode.Solutions;
+namespace AdventOfCode.Solutions;
 
 public static class SolutionCollector
 {
@@ -11,8 +11,10 @@ public static class SolutionCollector
             var type = Type.GetType($"AdventOfCode.Solutions.Year{year}.Day{day:D2}.Solution");
             if (type != null)
             {
-                var solution = Activator.CreateInstance(type) as SolutionBase;
-                if (solution != null) yield return solution;
+                if (Activator.CreateInstance(type) is SolutionBase solution)
+                {
+                    yield return solution;
+                }
             }
         }
     }

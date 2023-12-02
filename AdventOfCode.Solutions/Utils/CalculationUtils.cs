@@ -1,4 +1,4 @@
-﻿namespace AdventOfCode.Solutions.Utils;
+namespace AdventOfCode.Solutions.Utils;
 
 public static class CalculationUtils
 {
