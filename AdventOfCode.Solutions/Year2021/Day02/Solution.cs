@@ -1,18 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AdventOfCode.Solutions.Year2021
+namespace AdventOfCode.Solutions.Year2021.Day02
 {
-
-    class Day02 : SolutionBase
+    internal class Solution : SolutionBase
     {
-
         private readonly string[] _input;
 
-        public Day02() : base(02, 2021, "Dive!")
+        public Solution() : base(02, 2021, "Dive!")
         {
-            _input = Input.SplitByNewline();
+            this._input = this.Input.SplitByNewline();
         }
 
         protected override string SolvePartOne()
@@ -20,9 +14,9 @@ namespace AdventOfCode.Solutions.Year2021
             int horizontalPosition = 0;
             int depth = 0;
 
-            foreach (var line in _input)
+            foreach (string line in this._input)
             {
-                var commandAndValue = line.Split(' ');
+                string[] commandAndValue = line.Split(' ');
                 switch (commandAndValue[0])
                 {
                     case "forward":
@@ -46,9 +40,9 @@ namespace AdventOfCode.Solutions.Year2021
             int depth = 0;
             int aim = 0;
 
-            foreach (var line in _input)
+            foreach (string line in this._input)
             {
-                var commandAndValue = line.Split(' ');
+                string[] commandAndValue = line.Split(' ');
                 switch (commandAndValue[0])
                 {
                     case "forward":
