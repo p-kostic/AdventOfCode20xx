@@ -25,7 +25,7 @@ Note that there's a seperate repository for 2021 in **Haskell**: [p-kostic/Adven
 | Day/Year | 2019 | 2020   | 2021        |  2022  |  2023 |
 |:--------:|:----:|:------:|:-----------:|:------:| :----:|
 |     1    |  ❌ |  ✔️     |  ✔️/Haskell |   ✔️   |   ✔️   |
-|     2    |  ❌ |  ✔️     |  ✔️/Haskell |   ✔️   |   ❌  |
+|     2    |  ❌ |  ✔️     |  ✔️/Haskell |   ✔️   |   ✔️  |
 |     3    |  ❌ |  ✔️     |  Haskell    |   ✔️  |   ❌  |
 |     4    |  ❌ |  ✔️     |  Haskell    |   ✔️  |   ❌  |
 |     5    |  ❌ |  ✔️     |  Haskell    |   ✔️  |   ❌  |
