@@ -63,7 +63,7 @@ internal class Solution : SolutionBase
     protected override string SolvePartOne()
     {
         return this._numbers
-            .Where(number => this._symbols.Exists(symbol => IsAdjacent(number, symbol)))
+            .Where(number => this._symbols.Exists(symbol => IsAdjacent(number.Start, number.End, symbol.Position)))
             .Sum(number => number.Value)
             .ToString();
     }
@@ -72,14 +72,16 @@ internal class Solution : SolutionBase
     {
         return this._symbols
             .Where(symbol => symbol.Value == '*')
-            .Select(symbol => this._numbers.Where(number => IsAdjacent(number, symbol)).ToArray())
+            .Select(symbol => this._numbers.Where(number => IsAdjacent(number.Start, number.End, symbol.Position)).ToArray())
             .Where(gears => gears.Length == 2)
             .Sum(gears => gears[0].Value * gears[1].Value)
             .ToString();
     }
     
-    private static bool IsAdjacent(Number number, Symbol symbol)
+    private static bool IsAdjacent((int x, int y) start, (int x, int y) end, (int x, int y) symbolPos)
     {
-        return Math.Abs(symbol.Position.x - number.Start.x) <= 1 && symbol.Position.y >= number.Start.y - 1 && symbol.Position.y <= number.End.y + 1;
+        return Math.Abs(symbolPos.x - start.x) <= 1
+               && symbolPos.y >= start.y - 1
+               && symbolPos.y <= end.y + 1;
     }
 }
