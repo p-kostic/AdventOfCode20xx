@@ -27,7 +27,7 @@ Note that there's a seperate repository for 2021 in **Haskell**: [p-kostic/Adven
 |     1    |  ❌ |  ✔️     |  ✔️/Haskell |   ✔️   |   ✔️   |
 |     2    |  ❌ |  ✔️     |  ✔️/Haskell |   ✔️   |   ✔️  |
 |     3    |  ❌ |  ✔️     |  Haskell    |   ✔️  |   ✔️  |
-|     4    |  ❌ |  ✔️     |  Haskell    |   ✔️  |   ❌  |
+|     4    |  ❌ |  ✔️     |  Haskell    |   ✔️  |   ✔️  |
 |     5    |  ❌ |  ✔️     |  Haskell    |   ✔️  |   ❌  |
 |     6    |  ❌ |  ✔️     |  Haskell    |   ✔️  |   ❌  |
 |     7    |  ❌ |  ✔️     |  Haskell    |   ✔️  |   ❌  |
