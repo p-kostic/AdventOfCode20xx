@@ -5,6 +5,7 @@ internal class Solution : SolutionBase
     private record Race(int TimeInMs, long RecordDistanceInMm);
 
     private readonly List<Race> _races;
+    private readonly Race _racePartTwo;
 
     public Solution() : base(06, 2023, "Wait For It")
     {
@@ -15,7 +16,9 @@ internal class Solution : SolutionBase
         this._races = new List<Race>();
         for (int i = 0; i < times.Length; i++)
             this._races.Add(new Race(times[i], distances[i]));
-        
+
+        // Part 2
+        this._racePartTwo = new Race(int.Parse(string.Concat(times.Select(x => x.ToString()))), long.Parse(string.Concat(distances.Select(x => x.ToString()))));
     }
 
     protected override string SolvePartOne()
@@ -44,17 +47,15 @@ internal class Solution : SolutionBase
 
     protected override string SolvePartTwo()
     {
-        var race = new Race(41667266, 244104712281040);
-
         int waysToWinThisRace = 0;
 
-        for (long holdDownTime = 0; holdDownTime < race.TimeInMs; holdDownTime++)
+        for (long holdDownTime = 0; holdDownTime < this._racePartTwo.TimeInMs; holdDownTime++)
         {
-            long remainingTime = race.TimeInMs - holdDownTime;
+            long remainingTime = this._racePartTwo.TimeInMs - holdDownTime;
             long speedInMms = holdDownTime;
             long traveledDistance = speedInMms * remainingTime;
 
-            if (traveledDistance > race.RecordDistanceInMm)
+            if (traveledDistance > this._racePartTwo.RecordDistanceInMm)
                 waysToWinThisRace++;
         }
 
