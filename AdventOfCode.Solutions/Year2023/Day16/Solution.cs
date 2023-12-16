@@ -57,17 +57,17 @@ internal class Solution : SolutionBase
     {
         var results = new List<int>();
 
-        for (int x = 0; x <= this._width; x++)
+        Parallel.For(0, this._width + 1, x =>
+        {
             results.Add(Simulate(new Beam(x, 0, Direction.Down)));
-
-        for (int x = 0; x <= this._width; x++)
             results.Add(Simulate(new Beam(x, this._height, Direction.Up)));
+        });
 
-        for (int y = 0; y <= this._height; y++)
+        Parallel.For(0, this._height + 1, y =>
+        {
             results.Add(Simulate(new Beam(0, y, Direction.Right)));
-
-        for (int y = 0; y <= this._height; y++)
             results.Add(Simulate(new Beam(this._width, y, Direction.Left)));
+        });
 
         return results.Max().ToString();
     }
