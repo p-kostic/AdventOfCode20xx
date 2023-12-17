@@ -1,4 +1,6 @@
-﻿namespace AdventOfCode.Solutions.Year2023.Day16;
+﻿using System.Collections.Concurrent;
+
+namespace AdventOfCode.Solutions.Year2023.Day16;
 
 internal class Solution : SolutionBase
 {
@@ -55,7 +57,7 @@ internal class Solution : SolutionBase
 
     protected override string SolvePartTwo()
     {
-        var results = new List<int>();
+        var results = new ConcurrentBag<int>();
 
         Parallel.For(0, this._width + 1, x =>
         {
